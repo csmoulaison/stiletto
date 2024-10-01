@@ -3,6 +3,8 @@
 
 #ifdef __EMSCRIPTEN__
 
+// Level data path
+#define PATH_LEVEL "levels/level.stiletto"
 // Textures paths
 #define PATH_ATLAS "textures/atlas.bmp"
 #define PATH_ICON "textures/icon.bmp"
@@ -11,6 +13,8 @@
 
 #else
 
+// Level data path
+#define PATH_LEVEL "resources/levels/stiletto.slevel"
 // Textures paths
 #define PATH_ATLAS "resources/textures/atlas.bmp"
 #define PATH_ICON "resources/textures/icon.bmp"

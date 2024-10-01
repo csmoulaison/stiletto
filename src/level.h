@@ -15,4 +15,11 @@ struct {
 	int num_sprites;
 } typedef Level;
 
+struct {
+
+} typedef LevelLoader;
+
+void level_serialize(Level* level);
+void level_deserialize(Level* level);
+
 #endif // level_h_INCLUDED
