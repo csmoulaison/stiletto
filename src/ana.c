@@ -4,9 +4,11 @@ void ana_update(Ana* ana, DrawContext* draw, AudioContext* audio, Input* input, 
 	ana->vel_x = 0;
 	if(input->right.held) {
 		ana->vel_x += ANA_SPEED_MAX;
+		ana->direction = 1;
 	}
 	if(input->left.held) {
 		ana->vel_x -= ANA_SPEED_MAX;
+		ana->direction = -1;
 	}
 
 	if(input->jump.just_pressed && ana->is_grounded) {

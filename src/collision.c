@@ -1,6 +1,6 @@
 #include "collision.h"
 
-#define GRAVITY 450
+#define GRAVITY 800
 #define GROUND_CHECK_DIST 0.75
 
 void resolve_velocity_physics(Collider* subject, bool* is_grounded, float* vel_x, float* vel_y, Collider* cols, int cols_len, double dt) {

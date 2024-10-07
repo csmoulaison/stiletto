@@ -44,6 +44,14 @@ struct {
 	Button atlas_right;
 	Button edit_mod;
 	Button edit_place;
+	Button edit_place_ana;
+	Button edit_serialize;
+	Button edit_deserialize;
+	Button edit_state_colliders;
+	Button edit_collider_start;
+	Button edit_collider_end;
+	Button edit_collider_incr;
+	Button edit_collider_deincr;
 	#endif
 } typedef Input;
 

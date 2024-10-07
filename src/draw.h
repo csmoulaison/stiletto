@@ -2,9 +2,10 @@
 #define draw_h_INCLUDED
 
 #include <SDL.h>
+#include "sprite_assets.h"
 
-#define LOGICAL_WIDTH 480
-#define LOGICAL_HEIGHT 360
+#define LOGICAL_WIDTH 320
+#define LOGICAL_HEIGHT 240
 
 struct {
 	SDL_Window* window;
@@ -19,6 +20,8 @@ struct {
 
 	float cam_x;
 	float cam_y;
+
+	SpriteAssets assets;
 } typedef DrawContext;
 
 void draw_clear(DrawContext* draw);

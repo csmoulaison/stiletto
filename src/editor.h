@@ -1,24 +1,40 @@
 #ifndef editor_h_INCLUDED
 #define editor_h_INCLUDED
 
+#ifdef __EDITOR__
+
 #include "draw.h"
+#include "draw_primitives.h"
 #include "audio.h"
 #include "input.h"
-#include "sprite.h"
+#include "draw_sprites.h"
 #include "level.h"
+#include "save_data.h"
+#include "paths.h"
 
-#ifdef __EDITOR__
+enum EditorState {
+	NORMAL,
+	COLLIDERS
+};
 
 struct {
 	Level level;
-	int atlas_x;
-	int atlas_y;
+	SaveData save;
+	
+	enum EditorState state;
 	int cursor_x;
 	int cursor_y;
+
+	int atlas_x;
+	int atlas_y;
+
+	uint32_t collider_index;
 } typedef Editor;
 
 void editor_init(Editor* editor);
 void editor_update(Editor* editor, DrawContext* draw, AudioContext* audio, Input* input, double dt);
+void editor_sprites_update(Editor* editor, DrawContext* draw, AudioContext* audio, Input* input, double dt);
+void editor_collision_update(Editor* editor, DrawContext* draw, AudioContext* audio, Input* input, double dt);
 
 #endif // ifdef editor
 

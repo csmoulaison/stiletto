@@ -8,18 +8,6 @@
 #include "loop.h"
 #include "init.h"
 
-/*
-DAY 1
-- Level designer (2hr)
-- Stiletto throw/bounce (2hr)
-- Lip bombs (1hr)
-- Sunglasses (1hr)
-- Enemies (1hr)
-DAY 2
-- Design levels (1hr)
-- Dialogue/UI (1hr)
-*/
-
 int main() {
 	Context* context = (Context*)malloc(sizeof(Context));
 	init(context);

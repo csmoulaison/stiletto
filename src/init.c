@@ -1,8 +1,8 @@
 #include "init.h"
 #include "paths.h"
 
-#define SCREEN_W 960
-#define SCREEN_H 720
+#define SCREEN_W 640
+#define SCREEN_H 480
 
 #ifdef __EMSCRIPTEN__
 #	include <emscripten.h>
@@ -25,8 +25,9 @@ void init(Context* context) {
 	DrawContext* draw = &context->draw;
 	draw->logical_width = LOGICAL_WIDTH;
 	draw->logical_height = LOGICAL_HEIGHT;
-	draw->cam_x = 0;
-	draw->cam_y = 0;
+	draw->cam_x = -((draw->logical_width - CAM_ZONE_W) / 2);
+	draw->cam_y = -((draw->logical_height - CAM_ZONE_H) / 2);
+	init_sprite_assets(&draw->assets);
 	
 	SDL_DisplayMode display_mode;
 	SDL_GetDesktopDisplayMode(0, &display_mode);

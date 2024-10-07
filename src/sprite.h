@@ -1,7 +1,7 @@
 #ifndef sprite_h_INCLUDED
 #define sprite_h_INCLUDED
 
-#include "draw.h"
+#include <stdint.h>
 
 struct {
     uint16_t x;
@@ -10,9 +10,6 @@ struct {
     uint16_t h;
 } typedef Sprite;
 
-void draw_sprite(DrawContext* draw, Sprite sprite, int pos_x, int pos_y, uint32_t color);
-void draw_sprite_scaled(DrawContext* draw, Sprite sprite, int pos_x, int pos_y, int end_x, int end_y, uint32_t color);
-void draw_sprite_absolute(DrawContext* draw, Sprite sprite, int pos_x, int pos_y, uint32_t color);
-void draw_sprite_scaled_absolute(DrawContext* draw, Sprite sprite, int pos_x, int pos_y, int end_x, int end_y, uint32_t color);
+Sprite sprite_flipped(Sprite sprite);
 
 #endif // sprite_h_INCLUDED

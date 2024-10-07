@@ -44,7 +44,7 @@ void input_map_buttons(Input* input) {
 	map_scancode_to_button(input, SDL_SCANCODE_A, &input->left);
 	map_scancode_to_button(input, SDL_SCANCODE_D, &input->right);
 	map_scancode_to_button(input, SDL_SCANCODE_SPACE, &input->jump);
-	map_scancode_to_button(input, SDL_SCANCODE_E, &input->throw);
+	map_scancode_to_button(input, SDL_SCANCODE_RETURN, &input->throw);
 	map_scancode_to_button(input, SDL_SCANCODE_Q, &input->bomb);
 
 	#ifdef __EDITOR__
@@ -58,6 +58,12 @@ void input_map_buttons(Input* input) {
 	map_scancode_to_button(input, SDL_SCANCODE_D, &input->atlas_right);
 	map_scancode_to_button(input, SDL_SCANCODE_LSHIFT, &input->edit_mod);
 	map_scancode_to_button(input, SDL_SCANCODE_RETURN, &input->edit_place);
+	map_scancode_to_button(input, SDL_SCANCODE_P, &input->edit_place_ana);
+	map_scancode_to_button(input, SDL_SCANCODE_F5, &input->edit_serialize);
+	map_scancode_to_button(input, SDL_SCANCODE_F9, &input->edit_deserialize);
+	map_scancode_to_button(input, SDL_SCANCODE_C, &input->edit_state_colliders);
+	map_scancode_to_button(input, SDL_SCANCODE_E, &input->edit_collider_incr);
+	map_scancode_to_button(input, SDL_SCANCODE_Q, &input->edit_collider_deincr);
 	#endif
 }
 

@@ -7,14 +7,16 @@
 #include "input.h"
 #include "collision.h"
 
-#define ANA_SPEED_MAX 100
-#define ANA_JUMP_SPEED 180
+#define ANA_SPEED_MAX 125
+#define ANA_JUMP_SPEED 275
+#define ANA_HALF_SIZE 8
 
 struct {
 	float x;
 	float y;
 	float vel_x;
 	float vel_y;
+	int direction;
 	bool is_grounded;
 } typedef Ana;
 
