@@ -11,7 +11,7 @@ So for example:
 s0 16 64 96 
 c32 32 128 16 
 
-Yhe final line must have a newline at the end.
+The final line must have a newline at the end.
 
 Formally:
 <specifier><num1><space><num2><space>...<numx><newline>
@@ -25,27 +25,18 @@ Formally:
 #include <stdint.h>
 #include "collision.h"
 #include "draw_sprites.h"
+#include "screen.h"
 
-#define CAM_ZONE_OFF_X       0
-#define CAM_ZONE_OFF_Y       0
+#define CAM_ZONE_OFF_X 0
+#define CAM_ZONE_OFF_Y 0
 #define CAM_ZONE_W 288
 #define CAM_ZONE_H 208
-#define MAX_LEVEL_SPRITES    1024
-#define MAX_STATIC_COLLIDERS 128
+#define MAX_SCREENS 32
+
+#define MAX_LEVEL_PATH_LEN 12
 
 struct {
-	int src_x;
-	int src_y;
-	int dst_x;
-	int dst_y;
-} typedef LevelSprite;
-
-struct {
-	LevelSprite sprites[MAX_LEVEL_SPRITES];
-	int sprites_len;
-
-	Collider static_colliders[MAX_STATIC_COLLIDERS];
-	int static_colliders_len;
+	Screen screens[MAX_SCREENS];
 } typedef Level;
 
 void level_serialize(Level* level);

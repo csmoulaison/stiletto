@@ -4,8 +4,9 @@
 #include <stdint.h>
 
 struct {
-	int32_t ana_x;
-	int32_t ana_y;
+	int16_t ana_x;
+	int16_t ana_y;
+	int16_t checkpoint;
 } typedef SaveData;
 
 void save_data_serialize(SaveData* data, const char* path);

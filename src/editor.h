@@ -19,6 +19,7 @@ enum EditorState {
 
 struct {
 	Level level;
+	char level_path[MAX_LEVEL_PATH_LEN];
 	SaveData save;
 	
 	enum EditorState state;
