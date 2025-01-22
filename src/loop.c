@@ -36,6 +36,5 @@ void loop(void* arg) {
 	game_update(&context->game, &context->draw, &context->audio, &context->input, dt);
 	#endif
 
-
 	draw_present(&context->draw);
 }
